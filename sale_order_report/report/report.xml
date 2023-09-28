@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="sale.action_report_saleorder" model="ir.actions.report">
+        <field name="report_name">sale_order_report.report_saleorder_custom</field>
+        <field name="report_file">sale_order_report.report_saleorder_custom</field>
+    </record>
+
+    <record id="purchase.action_report_purchase_order" model="ir.actions.report">
+        <field name="report_name">sale_order_report.report_purchaseorder_custom</field>
+        <field name="report_file">sale_order_report.report_purchaseorder_custom</field>
+    </record>
+</odoo>
