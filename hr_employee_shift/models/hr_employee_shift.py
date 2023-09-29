@@ -29,15 +29,6 @@ class HrEmployee(models.Model):
 
 	resource_calendar_ids = fields.Many2one('resource.calendar', 'Working Hours',)
 
-	def update_contracts(self, new_calendar_id):
-		self.env['hr.contract'].search([('employee_id','in',self.ids),('state','=','open')]).write({
-			'resource_calendar_id': new_calendar_id})
-
-	@api.onchange('resource_calendar_id')
-	def onch_resource_cal_id(self):
-		if self.resource_calendar_id:
-			self.update_contracts(self['resource_calendar_id'])
-
 
 class HrEmployeeShift(models.Model):
 	_inherit = 'resource.calendar'
