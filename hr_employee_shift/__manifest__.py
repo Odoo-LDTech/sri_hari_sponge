@@ -38,6 +38,7 @@
         'views/hr_employee_shift_view.xml',
         'views/hr_employee_contract_view.xml',
         'views/hr_generate_shift_view.xml',
+        'report/hr_bulk_shift_change_views.xml',
     ],
     'demo': [
         'demo/shift_schedule_data.xml',

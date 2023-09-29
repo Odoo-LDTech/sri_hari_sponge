@@ -39,7 +39,3 @@ class LeaveEnchasement(models.Model):
             'view_id': self.env.ref('ld_leave_enchasement.reject_reason_wizard_view_form').id,
             'target': 'new'
         }
-
-
-class HrEmp(models.Model):
-    _inherit = 'hr.employee'

@@ -13,7 +13,7 @@
                     <field name="department_id"/>
                 </xpath>
                 <xpath expr="//group[@name='top_info_left']" position="after">
-                    <group colspan="2" string="Shift Schedule">
+                    <!-- <group colspan="2" string="Shift Schedule"> -->
                         <field name="shift_schedule" nolabel="1">
                             <tree editable="1">
                                 <field name="start_date"/>
@@ -21,7 +21,7 @@
                                 <field name="hr_shift"/>
                             </tree>
                         </field>
-                    </group>
+                    <!-- </group> -->
                 </xpath>
             </field>
         </record>
