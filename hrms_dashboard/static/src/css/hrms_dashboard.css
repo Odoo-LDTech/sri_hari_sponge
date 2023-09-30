@@ -74,9 +74,9 @@ overflow: auto !important;
   color: #00438b; }
 
 .mb-0{
-    font-size: 20px;
+    font-size: 16px;
     position: relative;
-    text-align: center;
+    text-align: left;
 }
 .mb-0 .dash-title {
     font-size: 20px;
