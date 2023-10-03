@@ -44,8 +44,8 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'hr_employee_shift/static/src/css/shift_dashboard.css',
-            'hr_employee_shift/static/src/less/shift_dashboard.less',
+            'ld_hr_employee_shift/static/src/css/shift_dashboard.css',
+            'ld_hr_employee_shift/static/src/less/shift_dashboard.less',
         ],
      },
     'images': ["static/description/banner.png"],
