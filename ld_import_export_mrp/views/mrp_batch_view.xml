@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="mrp_batch_form_view" model="ir.ui.view">
+            <field name="name">mrp_batch.form.view</field>
+            <field name="model">mrp.batch</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Batch Title"/>
+                            </h1>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mrp_batch_tree_view" model="ir.ui.view">
+            <field name="name">mrp_batch.tree.view</field>
+            <field name="model">mrp.batch</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mrp_batch_search_view" model="ir.ui.view">
+            <field name="name">mrp_batch.search.view</field>
+            <field name="model">mrp.batch</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="mrp_batch_act_window" model="ir.actions.act_window">
+            <field name="name">Batch</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.batch</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    There is no Batch click here to add new Batch.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Batch" id="mrp_batch_menu" parent="mrp.menu_mrp_configuration" action="mrp_batch_act_window"/>
+
+    </data>
+</odoo>

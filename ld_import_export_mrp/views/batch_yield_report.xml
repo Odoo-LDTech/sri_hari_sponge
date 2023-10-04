@@ -1,0 +1,29 @@
+<odoo>
+	<record id="view_batch_yield_report_tree" model="ir.ui.view">
+        <field name="name">Batch Yield Report</field>
+        <field name="model">batch.yield.report</field>
+        <field name="arch" type="xml">
+            <tree string="Batch Yield Report" editable="top">
+                <field name="batch_id" required="1" attrs="{'readonly':[('is_approve','=',True)]}"/>
+                <field name="input_id" required="1" attrs="{'readonly':[('is_approve','=',True)]}"/>
+                <field name="output_id" required="1" attrs="{'readonly':[('is_approve','=',True)]}"/>
+                <field name="input_qty"/>
+                <field name="output_qty"/>
+                <field name="yield_percentage"/>
+                <field name="is_approve" invisible="1"/>
+                <button type="object" name="action_approve" string="Approve" class="btn btn-primary"
+                        attrs="{'invisible':[('is_approve','=',True)]}"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_batch_yield_report_view" model="ir.actions.act_window">
+        <field name="name">Batch Yield Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">batch.yield.report</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="menu_batch_yield_report_view" action="action_batch_yield_report_view"
+              name="Batch Yield Report" parent="mrp.menu_mrp_reporting"/>
+</odoo>

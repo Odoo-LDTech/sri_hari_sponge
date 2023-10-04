@@ -1,0 +1,24 @@
+<odoo>
+	<record id="view_yield_report_tree" model="ir.ui.view">
+        <field name="name">Yield Report</field>
+        <field name="model">yield.report</field>
+        <field name="arch" type="xml">
+            <tree string="Yield Report" create="false" edit="false">
+                <field name="manufacturing_id"/>
+                <field name="batch_id"/>
+                <field name="input_head_on"/>
+                <field name="output_head_off"/>
+                <field name="yield_percentage"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_yield_report_view" model="ir.actions.act_window">
+        <field name="name">Yield Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">yield.report</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <menuitem id="menu_yield_report_view" action="action_yield_report_view"
+              name="Yield Report" parent="mrp.menu_mrp_reporting"/>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_yield_report,name_yield_report,model_yield_report,,1,0,0,0
+access_batch_yield_report,name_batch_yield_report,model_batch_yield_report,,1,1,1,1
+access_mrp_batch,access_mrp_batch,model_mrp_batch,,1,1,1,1
